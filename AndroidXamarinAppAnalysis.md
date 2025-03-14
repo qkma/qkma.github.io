@@ -1,9 +1,7 @@
----
 title: "Analyzing an Android developed with Xamarin Framework."
 date: 2025-03-14
 tags: [apk analysis, Xamarin, deobfuscation, traffic interception] # Optional: Add relevant tags
 categories: [Reverse engineering, mobile app analysis] # Optional: Add relevant categories
----
 
 # Introduction
 
@@ -18,9 +16,9 @@ After unzipping, besides the usual AndroidManifest.xml, classes.dex, assets, lib
 From google search and Xamarin documentation, these dll files contain the main logic of the mobile app. 
 
 ## DLL Handling/Deobfuscation to Get Code
-* **Decompress**
-* The first thing to do with these dll files is to decompress them with the script provided at https://github.com/NickstaDB/xamarin-decompress. I used the following batch processing script in Windows to decompress all the dll files in place.
-* ```bash
+### Decompress
+The first thing to do with these dll files is to decompress them with the script provided at https://github.com/NickstaDB/xamarin-decompress. I used the following batch processing script in Windows to decompress all the dll files in place.
+```bash
 @echo off
 set "folder=.\assemblies"
 set "program=python decompress.py"
@@ -32,7 +30,7 @@ for %%f in ("%folder%\*.dll") do (
 
 echo Done.
 ```
-
+### 
 
 
 
