@@ -47,8 +47,11 @@ Upon launching HTTP Toolkit on laptop, choose "Android Device via ADB". Follow i
 
 ![Connected](images/connected.png)
 
-As my phone is not rooted, there is no way to enable "System interception". Luckily didn't need that for the app I was analyzing
-However, when I check the traffic, traffic for the app shown as "server certificate not trusted". Either it doesn't trust "user certificates", which means I won't be able to intercept its traffic without a rooted phone; or it implements certificate pinning. [apk-mitm](https://github.com/niklashigi/apk-mitm) is a tool that does automatical removal of common certificate pinnings, so I decided to give it a try. After run apk-mitm against the apk file, push modified apk file to the android device and reinstall the apk file, I run HTTP Toolkit interception again and viola, it works this time, I can see the traffic from the mobile app in HTTP Toolkit window.
+As my phone is not rooted, there is no way to enable "System interception". Luckily it turned out not necessaryfor the app I was analyzing
+
+However, when I check the traffic, traffic for the app shown as "server certificate not trusted". Either it doesn't trust "user certificates", which means I won't be able to intercept its traffic without a rooted phone; or it implements certificate pinning. 
+
+[apk-mitm](https://github.com/niklashigi/apk-mitm) is a tool that does automatical removal of common certificate pinnings, so I decided to give it a try. After run apk-mitm against the apk file, push modified apk file to the android device and reinstall the apk file, I run HTTP Toolkit interception again and viola, it works this time, I can see the traffic from the mobile app in HTTP Toolkit window.
 
 
 
