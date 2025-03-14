@@ -1,7 +1,10 @@
 ---
 title: "Analyzing an Android developed with Xamarin Framework."
+
 date: 2025-03-14
+
 tags: apk analysis, Xamarin, deobfuscation, traffic interception
+
 categories: Reverse engineering, mobile app analysis
 ---
 
