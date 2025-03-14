@@ -54,7 +54,11 @@ As my phone is not rooted, there is no way to enable "System interception". Luck
 
 However, when I check the traffic, traffic for the app shown as "server certificate not trusted". Either it doesn't trust "user certificates", which means I won't be able to intercept its traffic without a rooted phone; or it implements certificate pinning. 
 
-[apk-mitm](https://github.com/niklashigi/apk-mitm) is a tool that does automatical removal of common certificate pinnings, so I decided to give it a try. After run apk-mitm against the apk file, push modified apk file to the android device and reinstall the apk file, I run HTTP Toolkit interception again and viola, it works this time, I can see the traffic from the mobile app in HTTP Toolkit window.
+[apk-mitm](https://github.com/niklashigi/apk-mitm) is a tool that does automatical removal of common certificate pinnings, so I decided to give it a try. After run apk-mitm against the apk file,
+```bash
+npx apk-mitm <path-to-apk>
+```
+push modified apk file to the android device and reinstall the apk file, I run HTTP Toolkit interception again and viola, it works this time, I can see the traffic from the mobile app in HTTP Toolkit window.
 
 
 
